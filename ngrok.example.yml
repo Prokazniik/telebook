@@ -3,7 +3,7 @@ authtoken:
 tunnels:
   client:
     proto: http
-    addr:
+    addrL: 70
   server:
     proto: http
     addr:
