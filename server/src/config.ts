@@ -12,12 +12,20 @@ if (!process.env.WEB_APP_URL) {
   throw new Error('WEB_APP_URL is not defined. Please set it in .env file.')
 }
 
+if (!process.env.APP_NAME) {
+  throw new Error('APP_NAME is not defined. Please set it in .env file.')
+}
+
+if (!process.env.PUBLIC_HOST) {
+  throw new Error('PUBLIC_HOST is not defined. Please set it in .env file.')
+}
+
 /**
  * We use .env for configuration.
  */
 export default {
-  appName: process.env.APP_NAME || 'Server',
-  publicHost: process.env.PUBLIC_HOST || 'http://localhost:3000',
+  appName: process.env.APP_NAME,
+  publicHost: process.env.PUBLIC_HOST,
   webAppUrl: process.env.WEB_APP_URL,
   botToken: process.env.BOT_TOKEN,
   providerToken: process.env.PROVIDER_TOKEN,
